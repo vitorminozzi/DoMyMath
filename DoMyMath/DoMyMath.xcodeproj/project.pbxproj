@@ -14,6 +14,7 @@
 		E7A9AD3825BFA782004F5760 /* DoMyMath.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E7A9AD3625BFA782004F5760 /* DoMyMath.xcdatamodeld */; };
 		E7A9AD3A25BFA784004F5760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7A9AD3925BFA784004F5760 /* Assets.xcassets */; };
 		E7A9AD3D25BFA784004F5760 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7A9AD3B25BFA784004F5760 /* LaunchScreen.storyboard */; };
+		E7A9AD4725BFA8A9004F5760 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9AD4625BFA8A9004F5760 /* AddItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E7A9AD3925BFA784004F5760 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7A9AD3C25BFA784004F5760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7A9AD3E25BFA784004F5760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7A9AD4625BFA8A9004F5760 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,8 @@
 		E7A9AD2C25BFA782004F5760 /* DoMyMath */ = {
 			isa = PBXGroup;
 			children = (
+				E7A9AD4A25BFB6E7004F5760 /* Custom */,
+				E7A9AD4525BFA7D6004F5760 /* GoShop */,
 				E7A9AD2D25BFA782004F5760 /* AppDelegate.swift */,
 				E7A9AD2F25BFA782004F5760 /* SceneDelegate.swift */,
 				E7A9AD3125BFA782004F5760 /* ViewController.swift */,
@@ -68,6 +72,29 @@
 				E7A9AD3625BFA782004F5760 /* DoMyMath.xcdatamodeld */,
 			);
 			path = DoMyMath;
+			sourceTree = "<group>";
+		};
+		E7A9AD4525BFA7D6004F5760 /* GoShop */ = {
+			isa = PBXGroup;
+			children = (
+				E7A9AD4925BFB65A004F5760 /* AddItem */,
+			);
+			path = GoShop;
+			sourceTree = "<group>";
+		};
+		E7A9AD4925BFB65A004F5760 /* AddItem */ = {
+			isa = PBXGroup;
+			children = (
+				E7A9AD4625BFA8A9004F5760 /* AddItemViewController.swift */,
+			);
+			path = AddItem;
+			sourceTree = "<group>";
+		};
+		E7A9AD4A25BFB6E7004F5760 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7A9AD4725BFA8A9004F5760 /* AddItemViewController.swift in Sources */,
 				E7A9AD3825BFA782004F5760 /* DoMyMath.xcdatamodeld in Sources */,
 				E7A9AD3225BFA782004F5760 /* ViewController.swift in Sources */,
 				E7A9AD2E25BFA782004F5760 /* AppDelegate.swift in Sources */,
