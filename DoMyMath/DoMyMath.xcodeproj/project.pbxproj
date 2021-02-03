@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E70C2EA825C0CBD80023FC77 /* MyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70C2EA725C0CBD80023FC77 /* MyListViewController.swift */; };
+		E7A1737725C8CBFF00C5DDB3 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A1737525C8CBFF00C5DDB3 /* ListTableViewCell.swift */; };
+		E7A1737825C8CBFF00C5DDB3 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7A1737625C8CBFF00C5DDB3 /* ListTableViewCell.xib */; };
 		E7A9AD2E25BFA782004F5760 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9AD2D25BFA782004F5760 /* AppDelegate.swift */; };
 		E7A9AD3025BFA782004F5760 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9AD2F25BFA782004F5760 /* SceneDelegate.swift */; };
 		E7A9AD3225BFA782004F5760 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9AD3125BFA782004F5760 /* ViewController.swift */; };
@@ -15,9 +18,14 @@
 		E7A9AD3A25BFA784004F5760 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7A9AD3925BFA784004F5760 /* Assets.xcassets */; };
 		E7A9AD3D25BFA784004F5760 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7A9AD3B25BFA784004F5760 /* LaunchScreen.storyboard */; };
 		E7A9AD4725BFA8A9004F5760 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9AD4625BFA8A9004F5760 /* AddItemViewController.swift */; };
+		E7D3099125C8D1CA00A3C164 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D3099025C8D1CA00A3C164 /* ListItem.swift */; };
+		E7D3099425C8D32200A3C164 /* AddItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D3099325C8D32200A3C164 /* AddItemController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E70C2EA725C0CBD80023FC77 /* MyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListViewController.swift; sourceTree = "<group>"; };
+		E7A1737525C8CBFF00C5DDB3 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		E7A1737625C8CBFF00C5DDB3 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		E7A9AD2A25BFA782004F5760 /* DoMyMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoMyMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A9AD2D25BFA782004F5760 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7A9AD2F25BFA782004F5760 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +36,8 @@
 		E7A9AD3C25BFA784004F5760 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7A9AD3E25BFA784004F5760 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7A9AD4625BFA8A9004F5760 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
+		E7D3099025C8D1CA00A3C164 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		E7D3099325C8D32200A3C164 /* AddItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E70C2EA625C0CBC90023FC77 /* MyList */ = {
+			isa = PBXGroup;
+			children = (
+				E70C2EA725C0CBD80023FC77 /* MyListViewController.swift */,
+			);
+			path = MyList;
+			sourceTree = "<group>";
+		};
 		E7A9AD2125BFA782004F5760 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +78,7 @@
 		E7A9AD2C25BFA782004F5760 /* DoMyMath */ = {
 			isa = PBXGroup;
 			children = (
+				E7D3098F25C8D19F00A3C164 /* Model */,
 				E7A9AD4A25BFB6E7004F5760 /* Custom */,
 				E7A9AD4525BFA7D6004F5760 /* GoShop */,
 				E7A9AD2D25BFA782004F5760 /* AppDelegate.swift */,
@@ -77,6 +96,7 @@
 		E7A9AD4525BFA7D6004F5760 /* GoShop */ = {
 			isa = PBXGroup;
 			children = (
+				E70C2EA625C0CBC90023FC77 /* MyList */,
 				E7A9AD4925BFB65A004F5760 /* AddItem */,
 			);
 			path = GoShop;
@@ -86,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				E7A9AD4625BFA8A9004F5760 /* AddItemViewController.swift */,
+				E7D3099325C8D32200A3C164 /* AddItemController.swift */,
 			);
 			path = AddItem;
 			sourceTree = "<group>";
@@ -93,8 +114,18 @@
 		E7A9AD4A25BFB6E7004F5760 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				E7A1737525C8CBFF00C5DDB3 /* ListTableViewCell.swift */,
+				E7A1737625C8CBFF00C5DDB3 /* ListTableViewCell.xib */,
 			);
 			path = Custom;
+			sourceTree = "<group>";
+		};
+		E7D3098F25C8D19F00A3C164 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E7D3099025C8D1CA00A3C164 /* ListItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7A9AD3D25BFA784004F5760 /* LaunchScreen.storyboard in Resources */,
+				E7A1737825C8CBFF00C5DDB3 /* ListTableViewCell.xib in Resources */,
 				E7A9AD3A25BFA784004F5760 /* Assets.xcassets in Resources */,
 				E7A9AD3525BFA782004F5760 /* Main.storyboard in Resources */,
 			);
@@ -167,9 +199,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7A1737725C8CBFF00C5DDB3 /* ListTableViewCell.swift in Sources */,
+				E70C2EA825C0CBD80023FC77 /* MyListViewController.swift in Sources */,
 				E7A9AD4725BFA8A9004F5760 /* AddItemViewController.swift in Sources */,
 				E7A9AD3825BFA782004F5760 /* DoMyMath.xcdatamodeld in Sources */,
+				E7D3099125C8D1CA00A3C164 /* ListItem.swift in Sources */,
 				E7A9AD3225BFA782004F5760 /* ViewController.swift in Sources */,
+				E7D3099425C8D32200A3C164 /* AddItemController.swift in Sources */,
 				E7A9AD2E25BFA782004F5760 /* AppDelegate.swift in Sources */,
 				E7A9AD3025BFA782004F5760 /* SceneDelegate.swift in Sources */,
 			);
