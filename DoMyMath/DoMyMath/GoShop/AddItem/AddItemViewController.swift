@@ -14,10 +14,7 @@ class AddItemViewController: UIViewController {
     var addItem:[ListItem] = []
     weak var delegate:AddItemProtocol?
     
-    // Outlets
-     
-    
-    
+    //MARK:- Outlets
     
     @IBOutlet weak var addLabel: UILabel!
     @IBOutlet weak var insertView: UIView!
@@ -26,29 +23,23 @@ class AddItemViewController: UIViewController {
     @IBOutlet weak var quantTextField: UITextField!
     @IBOutlet weak var addButton: UIButton!
     
-    
-    
-    // viewDidLoad
-    
-    
-    
+
+    //MARK:- viewDidLoad
+
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
         
-        self.signDelegate()
+        self.setupTextField()
         self.setupButton()
-        
-      
+
     }
     
     // actions
     
     @IBAction func addAction(_ sender: Any) {
         
-        self.addButtonTest()
- 
+        
         self.addItem.append(ListItem(quantity: Int(self.quantTextField.text ?? "") ?? 0,
                                      product: self.itemTextField.text ?? "",
                                      price: Float(self.priceTextField.text ?? "") ?? 0.0))
@@ -56,17 +47,12 @@ class AddItemViewController: UIViewController {
         print(addItem)
         
         self.delegate?.successAddProduto(array: addItem)
+        self.dismiss(animated: true, completion: nil)
         self.clearFields()
        
-      
-    
     }
     
     //  Functions
-    
-
-    
-
     
     func setupButton() {
         
@@ -77,15 +63,7 @@ class AddItemViewController: UIViewController {
     }
     
     
-    func addButtonTest(){
-        
-        print(self.itemTextField.text ?? "")
-        print(self.priceTextField.text ?? "")
-        print(self.quantTextField.text ?? "")
-     
-    }
-    
-    func signDelegate(){
+    func setupTextField(){
         
         self.itemTextField.delegate = self
         self.priceTextField.delegate = self
@@ -98,14 +76,8 @@ class AddItemViewController: UIViewController {
     self.priceTextField.text = nil
     self.quantTextField.text = nil
     }
-    
-    
+
 }
-
-
-
-
-
 
 extension AddItemViewController:UITextFieldDelegate{
     

@@ -9,9 +9,7 @@ import UIKit
 
 class MyListViewController: UIViewController {
     
-       
     
-
     @IBOutlet weak var listTableView: UITableView!
     
     @IBOutlet weak var quantLabel: UILabel!
@@ -31,37 +29,23 @@ class MyListViewController: UIViewController {
         super.viewDidLoad()
 
         
-        
         self.listTableView.register(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier: "ListTableViewCell")
         self.listTableView.delegate = self
         self.listTableView.dataSource = self
-        
- 
-     
+    
         self.setupLabels()
        
-        
-     
     }
-    
-    
     
     @IBAction func helpAction(_ sender: Any) {
         
     
     }
     
-    
     @IBAction func plusAction(_ sender: Any) {
-        
+        self.performSegue(withIdentifier: "AddItemViewController", sender: nil)
         
     }
-    
-    
-    
-    
-    
-    
     
     func setupLabels(){
         
@@ -75,14 +59,18 @@ class MyListViewController: UIViewController {
     
     func getItem(){
         
-       
-      
-        
         self.listTableView.reloadData()
      
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+        let vc: AddItemViewController? = segue.destination as? AddItemViewController
+        
+        vc?.delegate = self
 
-
+    }
 }
 
 
@@ -97,21 +85,12 @@ extension MyListViewController: UITableViewDelegate, UITableViewDataSource{
         
         let cell:ListTableViewCell? = tableView.dequeueReusableCell(withIdentifier: "ListTableViewCell") as? ListTableViewCell
         
-        cell?.quantLabel.text = String(self.myListItens[indexPath.row].quantity ?? 0)
-        cell?.produtoLabel.text = self.myListItens[indexPath.row].product
-        cell?.priceLabel.text = String(self.myListItens[indexPath.row].price ?? 0.0)
+        cell?.setup(item: self.myListItens[indexPath.row])
         
         return cell ?? UITableViewCell()
-        
-        
     }
     
-    
-    
-    
 }
-
-
 
 
 extension MyListViewController: AddItemProtocol{
@@ -124,8 +103,5 @@ extension MyListViewController: AddItemProtocol{
         print("to aqui")
         
     }
-    
-    
-    
-    
+
 }

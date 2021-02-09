@@ -16,7 +16,14 @@ class ListTableViewCell: UITableViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     
     
-    
+    func setup(item:ListItem?) {
+        
+        if let _item = item {
+            self.quantLabel.text = String(_item.quantity ?? 0)
+            self.produtoLabel.text = _item.product
+            self.priceLabel.text = String(_item.price ?? 0.0)
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
