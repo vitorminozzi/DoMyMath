@@ -20,6 +20,7 @@
 		E7A9AD4725BFA8A9004F5760 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9AD4625BFA8A9004F5760 /* AddItemViewController.swift */; };
 		E7D3099125C8D1CA00A3C164 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D3099025C8D1CA00A3C164 /* ListItem.swift */; };
 		E7D3099425C8D32200A3C164 /* AddItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D3099325C8D32200A3C164 /* AddItemController.swift */; };
+		E7D8EFD825CA330A00E23874 /* MyListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D8EFD725CA330A00E23874 /* MyListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		E7A9AD4625BFA8A9004F5760 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		E7D3099025C8D1CA00A3C164 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		E7D3099325C8D32200A3C164 /* AddItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemController.swift; sourceTree = "<group>"; };
+		E7D8EFD725CA330A00E23874 /* MyListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				E70C2EA725C0CBD80023FC77 /* MyListViewController.swift */,
+				E7D8EFD725CA330A00E23874 /* MyListController.swift */,
 			);
 			path = MyList;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				E7D3099125C8D1CA00A3C164 /* ListItem.swift in Sources */,
 				E7A9AD3225BFA782004F5760 /* ViewController.swift in Sources */,
 				E7D3099425C8D32200A3C164 /* AddItemController.swift in Sources */,
+				E7D8EFD825CA330A00E23874 /* MyListController.swift in Sources */,
 				E7A9AD2E25BFA782004F5760 /* AppDelegate.swift in Sources */,
 				E7A9AD3025BFA782004F5760 /* SceneDelegate.swift in Sources */,
 			);

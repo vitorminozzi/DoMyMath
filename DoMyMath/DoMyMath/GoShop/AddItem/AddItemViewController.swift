@@ -9,8 +9,9 @@ import UIKit
 
 class AddItemViewController: UIViewController {
 
+    var item:[ListItem]?
     
-    var controller:AddItemController = AddItemController()
+    let controller:AddItemController = AddItemController()
     
     // Outlets
      
@@ -18,13 +19,10 @@ class AddItemViewController: UIViewController {
     
     
     @IBOutlet weak var addLabel: UILabel!
-    
     @IBOutlet weak var insertView: UIView!
-    
     @IBOutlet weak var itemTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
     @IBOutlet weak var quantTextField: UITextField!
-    
     @IBOutlet weak var addButton: UIButton!
     
     
@@ -49,8 +47,14 @@ class AddItemViewController: UIViewController {
     @IBAction func addAction(_ sender: Any) {
         
         self.addButtonTest()
-        controller.addItem(quantity: Int(self.quantTextField.text ?? "") ?? 0, product: self.itemTextField.text ?? "", price: Float(self.priceTextField.text ?? "") ?? 0.1)
+        controller.addItemToDefauts(quantity: Int(quantTextField.text ?? "") ?? 0,
+                                    product: self.itemTextField.text ?? "",
+                                    price: Float(priceTextField.text ?? "") ?? 0.0)
+        
         self.clearFields()
+   
+        
+        
     }
     
     //  Functions
@@ -119,3 +123,7 @@ extension AddItemViewController:UITextFieldDelegate{
     
     
 }
+
+
+
+

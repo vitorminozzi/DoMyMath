@@ -10,8 +10,7 @@ import UIKit
 class MyListViewController: UIViewController {
     
        
-    
-    
+    var controller:MyListController = MyListController()
 
     @IBOutlet weak var listTableView: UITableView!
     
@@ -22,6 +21,11 @@ class MyListViewController: UIViewController {
     
     @IBOutlet weak var helpButton: UIButton!
     @IBOutlet weak var backToAddButton: UIButton!
+    
+    
+   
+    var myListItens:[ListItem] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,12 +39,20 @@ class MyListViewController: UIViewController {
         
         
         self.setupLabels()
-        
+       
         
      
     }
     
-
+    
+    
+    @IBAction func helpAction(_ sender: Any) {
+        
+    
+    
+        
+    }
+    
     func setupLabels(){
         
         self.quantNumberLabel.layer.borderWidth = 1
@@ -48,8 +60,16 @@ class MyListViewController: UIViewController {
         self.totalPriceLabel.layer.borderWidth = 1
         self.totalPriceLabel.layer.cornerRadius = 10
         
+    }
+    
+    
+    func getItem(){
         
+       
+      
         
+        self.listTableView.reloadData()
+     
     }
 
 
@@ -60,13 +80,16 @@ extension MyListViewController: UITableViewDelegate, UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.myListItens.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:ListTableViewCell? = tableView.dequeueReusableCell(withIdentifier: "ListTableViewCell") as? ListTableViewCell
         
+        cell?.quantLabel.text = String(self.myListItens[indexPath.row].quantity ?? 0)
+        cell?.produtoLabel.text = self.myListItens[indexPath.row].product
+        cell?.priceLabel.text = String(self.myListItens[indexPath.row].price ?? 0.0)
         
         return cell ?? UITableViewCell()
         
