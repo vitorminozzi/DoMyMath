@@ -65,10 +65,9 @@ class MyListViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        
         let vc: AddItemViewController? = segue.destination as? AddItemViewController
         
-        vc?.delegate = self
+        vc?.controller.delegate = self
 
     }
 }
@@ -93,7 +92,7 @@ extension MyListViewController: UITableViewDelegate, UITableViewDataSource{
 }
 
 
-extension MyListViewController: AddItemProtocol{
+extension MyListViewController: AddItemControllerProtocol{
     
     
     func successAddProduto(array: [ListItem]) {

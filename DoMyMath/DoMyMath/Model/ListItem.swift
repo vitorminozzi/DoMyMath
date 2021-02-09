@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct ListItem: Encodable, Decodable{
+struct ListItem: Encodable{
     
  
     var quantity:Int?
@@ -16,7 +16,7 @@ struct ListItem: Encodable, Decodable{
     var price:Float?
     
     
-    init(quantity:Int, product:String, price:Float) {
+    init(quantity:Int?, product:String?, price:Float?) {
         
         self.quantity = quantity
         self.product = product

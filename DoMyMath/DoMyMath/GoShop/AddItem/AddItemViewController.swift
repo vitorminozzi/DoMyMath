@@ -9,10 +9,8 @@ import UIKit
 
 class AddItemViewController: UIViewController {
 
-    
-    
-    var addItem:[ListItem] = []
-    weak var delegate:AddItemProtocol?
+   
+    var controller: AddItemController = AddItemController()
     
     //MARK:- Outlets
     
@@ -39,14 +37,9 @@ class AddItemViewController: UIViewController {
     
     @IBAction func addAction(_ sender: Any) {
         
+        self.controller.addItem(produto: self.itemTextField.text, quantidade: self.quantTextField.text, preco: self.priceTextField.text)
+    
         
-        self.addItem.append(ListItem(quantity: Int(self.quantTextField.text ?? "") ?? 0,
-                                     product: self.itemTextField.text ?? "",
-                                     price: Float(self.priceTextField.text ?? "") ?? 0.0))
-        
-        print(addItem)
-        
-        self.delegate?.successAddProduto(array: addItem)
         self.dismiss(animated: true, completion: nil)
         self.clearFields()
        
