@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E70C2EA825C0CBD80023FC77 /* MyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70C2EA725C0CBD80023FC77 /* MyListViewController.swift */; };
+		E77D68C225D2209C0094237C /* AddItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77D68C125D2209C0094237C /* AddItemProtocol.swift */; };
 		E7A1737725C8CBFF00C5DDB3 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A1737525C8CBFF00C5DDB3 /* ListTableViewCell.swift */; };
 		E7A1737825C8CBFF00C5DDB3 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7A1737625C8CBFF00C5DDB3 /* ListTableViewCell.xib */; };
 		E7A9AD2E25BFA782004F5760 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A9AD2D25BFA782004F5760 /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		E70C2EA725C0CBD80023FC77 /* MyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListViewController.swift; sourceTree = "<group>"; };
+		E77D68C125D2209C0094237C /* AddItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemProtocol.swift; sourceTree = "<group>"; };
 		E7A1737525C8CBFF00C5DDB3 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		E7A1737625C8CBFF00C5DDB3 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		E7A9AD2A25BFA782004F5760 /* DoMyMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoMyMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +112,7 @@
 			children = (
 				E7A9AD4625BFA8A9004F5760 /* AddItemViewController.swift */,
 				E7D3099325C8D32200A3C164 /* AddItemController.swift */,
+				E77D68C125D2209C0094237C /* AddItemProtocol.swift */,
 			);
 			path = AddItem;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				E7A9AD3825BFA782004F5760 /* DoMyMath.xcdatamodeld in Sources */,
 				E7D3099125C8D1CA00A3C164 /* ListItem.swift in Sources */,
 				E7A9AD3225BFA782004F5760 /* ViewController.swift in Sources */,
+				E77D68C225D2209C0094237C /* AddItemProtocol.swift in Sources */,
 				E7D3099425C8D32200A3C164 /* AddItemController.swift in Sources */,
 				E7D8EFD825CA330A00E23874 /* MyListController.swift in Sources */,
 				E7A9AD2E25BFA782004F5760 /* AppDelegate.swift in Sources */,

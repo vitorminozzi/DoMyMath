@@ -10,7 +10,7 @@ import UIKit
 class MyListViewController: UIViewController {
     
        
-    var controller:MyListController = MyListController()
+    
 
     @IBOutlet weak var listTableView: UITableView!
     
@@ -36,8 +36,8 @@ class MyListViewController: UIViewController {
         self.listTableView.delegate = self
         self.listTableView.dataSource = self
         
-        
-        
+ 
+     
         self.setupLabels()
        
         
@@ -49,9 +49,19 @@ class MyListViewController: UIViewController {
     @IBAction func helpAction(_ sender: Any) {
         
     
+    }
     
+    
+    @IBAction func plusAction(_ sender: Any) {
+        
         
     }
+    
+    
+    
+    
+    
+    
     
     func setupLabels(){
         
@@ -93,6 +103,25 @@ extension MyListViewController: UITableViewDelegate, UITableViewDataSource{
         
         return cell ?? UITableViewCell()
         
+        
+    }
+    
+    
+    
+    
+}
+
+
+
+
+extension MyListViewController: AddItemProtocol{
+    
+    
+    func successAddProduto(array: [ListItem]) {
+        
+        self.myListItens += array
+        self.listTableView.reloadData()
+        print("to aqui")
         
     }
     

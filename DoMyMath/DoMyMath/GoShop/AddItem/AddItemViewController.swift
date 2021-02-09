@@ -9,9 +9,10 @@ import UIKit
 
 class AddItemViewController: UIViewController {
 
-    var item:[ListItem]?
     
-    let controller:AddItemController = AddItemController()
+    
+    var addItem:[ListItem] = []
+    weak var delegate:AddItemProtocol?
     
     // Outlets
      
@@ -47,18 +48,25 @@ class AddItemViewController: UIViewController {
     @IBAction func addAction(_ sender: Any) {
         
         self.addButtonTest()
-        controller.addItemToDefauts(quantity: Int(quantTextField.text ?? "") ?? 0,
-                                    product: self.itemTextField.text ?? "",
-                                    price: Float(priceTextField.text ?? "") ?? 0.0)
+ 
+        self.addItem.append(ListItem(quantity: Int(self.quantTextField.text ?? "") ?? 0,
+                                     product: self.itemTextField.text ?? "",
+                                     price: Float(self.priceTextField.text ?? "") ?? 0.0))
         
+        print(addItem)
+        
+        self.delegate?.successAddProduto(array: addItem)
         self.clearFields()
-   
-        
-        
+       
+      
+    
     }
     
     //  Functions
     
+
+    
+
     
     func setupButton() {
         

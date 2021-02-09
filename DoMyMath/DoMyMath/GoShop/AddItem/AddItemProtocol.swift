@@ -8,11 +8,8 @@
 import Foundation
 
 
-protocol AddItemProtocol: class {
+protocol AddItemProtocol: class  {
     
     func successAddProduto(array: [ListItem])
     
 }
-
-
-

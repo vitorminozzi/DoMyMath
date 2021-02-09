@@ -55,23 +55,23 @@
         <!--My List-->
         <scene sceneID="qyi-9F-cKJ">
             <objects>
-                <viewController id="bUu-Ot-v4R" customClass="MyListViewController" customModule="DoMyMath" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyListViewController" modalPresentationStyle="fullScreen" id="bUu-Ot-v4R" customClass="MyListViewController" customModule="DoMyMath" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sdE-bH-hbD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wPB-9t-kHn">
-                                <rect key="frame" x="5" y="84" width="404" height="629"/>
+                                <rect key="frame" x="5" y="84" width="404" height="678"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Produtos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0O7-ch-egZ">
-                                <rect key="frame" x="5" y="755" width="69" height="21"/>
+                                <rect key="frame" x="5" y="804" width="69" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0078431372550000003" green="0.28235294119999998" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4SN-ZG-Wbk">
-                                <rect key="frame" x="93" y="755" width="42" height="21"/>
+                                <rect key="frame" x="93" y="804" width="42" height="21"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="QEZ-0a-hOO"/>
@@ -82,13 +82,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4S-WP-j4Y">
-                                <rect key="frame" x="245" y="755" width="37" height="21"/>
+                                <rect key="frame" x="245" y="804" width="37" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0078431372550000003" green="0.28235294119999998" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 0,00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOa-kb-Qi3">
-                                <rect key="frame" x="301" y="755" width="108" height="21"/>
+                                <rect key="frame" x="301" y="804" width="108" height="21"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="hRA-8N-nBz"/>
@@ -118,6 +118,9 @@
                                 </constraints>
                                 <color key="tintColor" red="0.0078431372550000003" green="0.28235294119999998" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="plusAction:" destination="bUu-Ot-v4R" eventType="touchUpInside" id="n3i-7Z-ZO2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wJK-0x-1si"/>
@@ -161,7 +164,7 @@
         <!--Add Itens-->
         <scene sceneID="gUG-Z9-hb9">
             <objects>
-                <viewController id="Otj-gu-5Mz" customClass="AddItemViewController" customModule="DoMyMath" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="add" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Otj-gu-5Mz" customClass="AddItemViewController" customModule="DoMyMath" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FFT-FL-smz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -271,6 +274,7 @@
                         <outlet property="itemTextField" destination="abI-Ae-IGn" id="GrX-Nf-v6F"/>
                         <outlet property="priceTextField" destination="lla-sT-Lj6" id="53i-hb-cXL"/>
                         <outlet property="quantTextField" destination="yHv-Gc-vC7" id="kC5-ge-GMl"/>
+                        <segue destination="bUu-Ot-v4R" kind="presentation" identifier="toList" id="RPb-3T-kuK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jAU-JU-2Nk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -299,6 +303,9 @@
             <point key="canvasLocation" x="754" y="175"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="RPb-3T-kuK"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="list.number" catalog="system" width="128" height="97"/>
         <image name="plus" catalog="system" width="128" height="113"/>

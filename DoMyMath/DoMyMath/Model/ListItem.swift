@@ -8,7 +8,7 @@
 import Foundation
 
 
-class ListItem: Encodable, Decodable{
+struct ListItem: Encodable, Decodable{
     
  
     var quantity:Int?
