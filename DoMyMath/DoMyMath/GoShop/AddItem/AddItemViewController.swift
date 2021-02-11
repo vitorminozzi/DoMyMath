@@ -37,9 +37,7 @@ class AddItemViewController: UIViewController {
     
     @IBAction func addAction(_ sender: Any) {
         
-        self.controller.addItem(produto: self.itemTextField.text, quantidade: self.quantTextField.text, preco: self.priceTextField.text)
-    
-        
+        self.controller.addItem(produto: self.itemTextField.text, quantidade: self.quantTextField.text, preco: self.priceTextField.text)       
         self.dismiss(animated: true, completion: nil)
         self.clearFields()
        

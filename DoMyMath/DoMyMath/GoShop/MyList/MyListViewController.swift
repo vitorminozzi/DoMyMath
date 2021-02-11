@@ -11,18 +11,16 @@ class MyListViewController: UIViewController {
     
     
     @IBOutlet weak var listTableView: UITableView!
-    
     @IBOutlet weak var quantLabel: UILabel!
     @IBOutlet weak var quantNumberLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var totalPriceLabel: UILabel!
-    
     @IBOutlet weak var helpButton: UIButton!
     @IBOutlet weak var backToAddButton: UIButton!
     
     
+    var controller:MyListController = MyListController()
    
-    var myListItens:[ListItem] = []
     
     
     override func viewDidLoad() {
@@ -57,12 +55,7 @@ class MyListViewController: UIViewController {
     }
     
     
-    func getItem(){
-        
-        self.listTableView.reloadData()
-     
-    }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let vc: AddItemViewController? = segue.destination as? AddItemViewController
@@ -77,27 +70,77 @@ extension MyListViewController: UITableViewDelegate, UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.myListItens.count
+        return self.controller.myListItens.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:ListTableViewCell? = tableView.dequeueReusableCell(withIdentifier: "ListTableViewCell") as? ListTableViewCell
         
-        cell?.setup(item: self.myListItens[indexPath.row])
+        cell?.setup(item: self.controller.myListItens[indexPath.row])
         
         return cell ?? UITableViewCell()
     }
     
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            
+            controller.quantityArray.remove(at: indexPath.row)
+            self.quantNumberLabel.text = "\(self.controller.getReduceQuantity())"
+            
+            controller.priceArray.remove(at: indexPath.row)
+            self.totalPriceLabel.text = "\(self.controller.getReducePrice())"
+            
+        
+            controller.myListItens.remove(at: indexPath.row)
+            
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+            }
+        
+        
+       
+        
+        
+    }
+    
+    
+    
 }
+
+
+
+
+//  protocol aplicado
 
 
 extension MyListViewController: AddItemControllerProtocol{
     
     
+    func successAddPrice(price: [Float]) {
+        
+
+        self.controller.priceArray += price
+        self.totalPriceLabel.text = "\(self.controller.getReducePrice())"
+        
+    }
+    
+    
+    
+    
+    func successAddInt(int: [Int]) {
+        
+       
+        self.controller.quantityArray += int
+        self.quantNumberLabel.text = "\(self.controller.getReduceQuantity())"
+    
+    }
+    
+    
     func successAddProduto(array: [ListItem]) {
         
-        self.myListItens += array
+        self.controller.myListItens += array
         self.listTableView.reloadData()
         print("to aqui")
         
