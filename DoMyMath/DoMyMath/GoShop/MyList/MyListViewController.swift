@@ -15,8 +15,9 @@ class MyListViewController: UIViewController {
     @IBOutlet weak var quantNumberLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var totalPriceLabel: UILabel!
-    @IBOutlet weak var helpButton: UIButton!
+    @IBOutlet weak var enviarButton: UIButton!
     @IBOutlet weak var backToAddButton: UIButton!
+    @IBOutlet weak var finalizarButton: UIButton!
     
     
     var controller:MyListController = MyListController()
@@ -35,7 +36,16 @@ class MyListViewController: UIViewController {
        
     }
     
-    @IBAction func helpAction(_ sender: Any) {
+    
+    
+    @IBAction func finalizarAction(_ sender: Any) {
+        
+    }
+    
+    
+    
+    
+    @IBAction func sendAction(_ sender: Any) {
         
     
     }
@@ -51,6 +61,8 @@ class MyListViewController: UIViewController {
         self.quantNumberLabel.layer.cornerRadius = 10
         self.totalPriceLabel.layer.borderWidth = 1
         self.totalPriceLabel.layer.cornerRadius = 10
+        self.finalizarButton.layer.cornerRadius = 10
+        
         
     }
     
