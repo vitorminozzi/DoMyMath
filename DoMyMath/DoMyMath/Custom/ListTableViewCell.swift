@@ -19,9 +19,9 @@ class ListTableViewCell: UITableViewCell {
     func setup(item:ListItem?) {
         
         if let _item = item {
-            self.quantLabel.text = String(_item.quantity ?? 0)
+            self.quantLabel.text = String(_item.quantity)
             self.produtoLabel.text = _item.product
-            self.priceLabel.text = String(_item.price ?? 0.0)
+            self.priceLabel.text = String(_item.price)
         }
     }
     

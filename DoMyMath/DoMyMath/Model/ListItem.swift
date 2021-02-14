@@ -10,18 +10,12 @@ import Foundation
 
 struct ListItem: Encodable{
     
- 
-    var quantity:Int?
-    var product:String?
-    var price:Float?
-    
-    
-    init(quantity:Int?, product:String?, price:Float?) {
-        
-        self.quantity = quantity
-        self.product = product
-        self.price = price
-        
+    let id = UUID().uuidString
+    var quantity:Int
+    var product:String
+    var price:Float
+    var total: Float {
+        return price * Float(quantity)
     }
     
 }

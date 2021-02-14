@@ -21,7 +21,10 @@ class AddItemViewController: UIViewController {
     @IBOutlet weak var quantTextField: UITextField!
     @IBOutlet weak var addButton: UIButton!
     
-
+    var editMode = false
+    
+    var item: ListItem?
+    
     //MARK:- viewDidLoad
 
     override func viewDidLoad() {
@@ -30,6 +33,17 @@ class AddItemViewController: UIViewController {
         
         self.setupTextField()
         self.setupButton()
+        
+        if editMode {
+            addLabel.text = "Edite o seu item"
+            addButton.setTitle("Editar Item", for: .normal)
+        }
+        
+        if let item = item {
+            itemTextField.text = item.product
+            priceTextField.text = item.price.description
+            quantTextField.text = item.quantity.description
+        }
 
     }
     
@@ -37,9 +51,30 @@ class AddItemViewController: UIViewController {
     
     @IBAction func addAction(_ sender: Any) {
         
-        self.controller.addItem(produto: self.itemTextField.text, quantidade: self.quantTextField.text, preco: self.priceTextField.text)       
+        guard let prod = self.itemTextField.text,
+              let quantity =  Int(self.quantTextField.text ?? ""),
+              let price = Float(self.priceTextField.text ?? "") else { return }
+        
+        if editMode {
+            self.item?.product = prod
+            self.item?.price = price
+            self.item?.quantity = quantity
+            
+            if let item = item {
+                
+                self.controller.editItem(editItem: item)
+            }
+            
+        } else {
+            
+            self.controller.addItem(produto: prod,
+                                    quantidade: quantity,
+                                    preco: price)
+            
+            self.clearFields()
+        }
+        
         self.dismiss(animated: true, completion: nil)
-        self.clearFields()
        
     }
     

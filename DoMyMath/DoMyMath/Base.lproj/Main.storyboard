@@ -92,6 +92,9 @@
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                     </preferredSymbolConfiguration>
                                 </state>
+                                <connections>
+                                    <action selector="toEditAction:" destination="bUu-Ot-v4R" eventType="touchUpInside" id="TrK-sv-30S"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NqU-fW-CQE">
                                 <rect key="frame" x="222" y="44" width="78" height="50"/>
@@ -244,7 +247,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AbP-JG-L1f"/>
-                        <color key="backgroundColor" red="0.94901960784313721" green="0.53725490196078429" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.58444148299999998" blue="0.41609334949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="giH-PC-s0V" firstAttribute="centerX" secondItem="AbP-JG-L1f" secondAttribute="centerX" id="5Rl-vX-2j2"/>
                             <constraint firstItem="SB4-OO-7N0" firstAttribute="leading" secondItem="AbP-JG-L1f" secondAttribute="leading" constant="20" id="5YR-5F-MSm"/>

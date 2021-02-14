@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E715BF7E25D6F420009D2125 /* EditListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E715BF7D25D6F420009D2125 /* EditListView.xib */; };
+		E715BF8125D6F44B009D2125 /* EditListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E715BF8025D6F44B009D2125 /* EditListView.swift */; };
 		E74F204C25D493A90089D7B1 /* MyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74F204B25D493A90089D7B1 /* MyListViewController.swift */; };
 		E7A1737725C8CBFF00C5DDB3 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A1737525C8CBFF00C5DDB3 /* ListTableViewCell.swift */; };
 		E7A1737825C8CBFF00C5DDB3 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7A1737625C8CBFF00C5DDB3 /* ListTableViewCell.xib */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E715BF7D25D6F420009D2125 /* EditListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditListView.xib; sourceTree = "<group>"; };
+		E715BF8025D6F44B009D2125 /* EditListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListView.swift; sourceTree = "<group>"; };
 		E74F204B25D493A90089D7B1 /* MyListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyListViewController.swift; sourceTree = "<group>"; };
 		E7A1737525C8CBFF00C5DDB3 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		E7A1737625C8CBFF00C5DDB3 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
@@ -60,6 +64,15 @@
 				E7D8EFD725CA330A00E23874 /* MyListController.swift */,
 			);
 			path = MyList;
+			sourceTree = "<group>";
+		};
+		E715BF7C25D6F2CD009D2125 /* EditList */ = {
+			isa = PBXGroup;
+			children = (
+				E715BF7D25D6F420009D2125 /* EditListView.xib */,
+				E715BF8025D6F44B009D2125 /* EditListView.swift */,
+			);
+			path = EditList;
 			sourceTree = "<group>";
 		};
 		E7A9AD2125BFA782004F5760 = {
@@ -99,6 +112,7 @@
 		E7A9AD4525BFA7D6004F5760 /* GoShop */ = {
 			isa = PBXGroup;
 			children = (
+				E715BF7C25D6F2CD009D2125 /* EditList */,
 				E70C2EA625C0CBC90023FC77 /* MyList */,
 				E7A9AD4925BFB65A004F5760 /* AddItem */,
 			);
@@ -190,6 +204,7 @@
 			files = (
 				E7A9AD3D25BFA784004F5760 /* LaunchScreen.storyboard in Resources */,
 				E7A1737825C8CBFF00C5DDB3 /* ListTableViewCell.xib in Resources */,
+				E715BF7E25D6F420009D2125 /* EditListView.xib in Resources */,
 				E7A9AD3A25BFA784004F5760 /* Assets.xcassets in Resources */,
 				E7A9AD3525BFA782004F5760 /* Main.storyboard in Resources */,
 			);
@@ -207,6 +222,7 @@
 				E74F204C25D493A90089D7B1 /* MyListViewController.swift in Sources */,
 				E7A9AD3825BFA782004F5760 /* DoMyMath.xcdatamodeld in Sources */,
 				E7D3099125C8D1CA00A3C164 /* ListItem.swift in Sources */,
+				E715BF8125D6F44B009D2125 /* EditListView.swift in Sources */,
 				E7A9AD3225BFA782004F5760 /* ViewController.swift in Sources */,
 				E7D3099425C8D32200A3C164 /* AddItemController.swift in Sources */,
 				E7D8EFD825CA330A00E23874 /* MyListController.swift in Sources */,
