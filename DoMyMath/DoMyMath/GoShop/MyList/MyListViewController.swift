@@ -15,7 +15,6 @@ class MyListViewController: UIViewController {
     @IBOutlet weak var quantNumberLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var totalPriceLabel: UILabel!
-    @IBOutlet weak var enviarButton: UIButton!
     @IBOutlet weak var backToAddButton: UIButton!
     @IBOutlet weak var finalizarButton: UIButton!
     
@@ -38,10 +37,7 @@ class MyListViewController: UIViewController {
     }
     
     
-    @IBAction func toEditAction(_ sender: Any) {
 
-         }
-    
     
     
     @IBAction func finalizarAction(_ sender: Any) {
@@ -50,11 +46,6 @@ class MyListViewController: UIViewController {
     
     
     
-    
-    @IBAction func sendAction(_ sender: Any) {
-        
-    
-    }
     
     @IBAction func plusAction(_ sender: Any) {
         
